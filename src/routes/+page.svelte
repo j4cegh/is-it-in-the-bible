@@ -1,8 +1,7 @@
 <script lang="ts">
 	import axios from 'axios';
-	import { dev } from '$app/environment';
 
-	const API_URL = dev
+	const API_URL = import.meta.env.DEV
 		? `http://127.0.0.1:5000/bible?search=`
 		: 'https://i3tb.j4ce.xyz/api/bible?search=';
 
