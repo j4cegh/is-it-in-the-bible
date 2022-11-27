@@ -3,7 +3,7 @@
 
 	const API_URL = import.meta.env.DEV
 		? `http://127.0.0.1:5000/bible?search=`
-		: 'https://i3tb.j4ce.xyz/api/bible?search=';
+		: 'https://api.i3tb.j4ce.xyz/bible?search=';
 
 	let search: string;
 	let hasLooked: boolean = false;
