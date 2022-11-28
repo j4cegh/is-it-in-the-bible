@@ -30,20 +30,16 @@
 	}
 
 	const searchSubmit = async () => {
-		verseInfo = {
-			verseAvailable: false,
-			inBible: false,
-			verse: null
-		};
-
 		let verse = await getVerse(search);
 
 		verseInfo = {
-			verseAvailable: verse != null,
-			inBible: verse != null,
+			verseAvailable: verse !== null,
+			inBible: verse !== null,
 			verse: verse
 		};
 
+		// mark that we have searched before, so the false message for
+		// verseInfo.verseAvailable doesn't pop up
 		hasLooked = true;
 	};
 </script>
